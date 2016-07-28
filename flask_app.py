@@ -20,9 +20,9 @@ def underconstruction():
 
 @app.route('/contact-submit', methods=['GET'])
 def sendmessage():
-	name = request.form['name']
-	email = request.form['email']
-	message = request.form['message']
+	name = request.querystring['name']
+	email = request.querystring['email']
+	message = request.querystring['message']
 
 	return '<ul><li>' + name + '</li><li>' + email + '</li><li>' + message + '</li></ul>'
 
