@@ -19,9 +19,9 @@ def underconstruction():
 
 @app.route('/contact-submit', methods=['GET'])
 def sendmessage():
-	#name = request.form['name']
-	#email = request.form['email']
-	#message = request.form['message']
+	email = request.form['email']
+	reason = requst.form['reason']
+	message = request.form['message']
 	
 	if request.method == 'GET':
 		return render_template('index.html')
