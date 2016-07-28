@@ -39,27 +39,23 @@
             </ul>
 
             <h5>contact</h5>
-            <form>
+            <form method="post" action="/contact-submit">
               <div class="row">
                 <div class="six columns">
-                  <label for="exampleEmailInput">Your email</label>
-                  <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+                  <label for="emailInput">Your email</label>
+                  <input class="u-full-width" type="email" placeholder="test@mailbox.com" name="email" id="emailInput">
                 </div>
                 <div class="six columns">
-                  <label for="exampleRecipientInput">Reason for contacting</label>
-                  <select class="u-full-width" id="exampleRecipientInput">
+                  <label for="recipientInput">Reason for contacting</label>
+                  <select class="u-full-width" id="recipientInput" name="reason">
                     <option value="Option 1">Questions</option>
                     <option value="Option 2">Contributions</option>
                     <option value="Option 3">Other</option>
                   </select>
                 </div>
               </div>
-              <label for="exampleMessage">Message</label>
-              <textarea class="u-full-width" placeholder="Hi Mike…" id="exampleMessage"></textarea>
-              <label class="example-send-yourself-copy">
-                <input type="checkbox">
-                <span class="label-body">Send a copy to yourself</span>
-              </label>
+              <label for="message">Message</label>
+              <textarea class="u-full-width" placeholder="Hi Mike…" id="message" name="message"></textarea>
               <input class="button-primary" type="submit" value="Submit">
             </form>
         </div>

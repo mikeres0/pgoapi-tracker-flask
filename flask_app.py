@@ -1,7 +1,7 @@
 
 # A very simple Flask Hello World app for you to get started with...
 
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, Response, request
 from flask.ext.login import LoginManager, UserMixin, login_required
 
 
@@ -18,5 +18,12 @@ def index():
 def underconstruction():
     return render_template('under-construction.html')
 
+@app.route('/contact-submit', methods=[POST])
+def sendmessage():
+	name = request.form['name']
+	email = request.form['email']
+	message = request.form['message']
+
+	return '<ul><li>' + name + '</li><li>' + email + '</li><li>' + message + '</li></ul>'
 
 
