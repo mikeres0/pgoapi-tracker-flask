@@ -18,12 +18,10 @@ def index():
 def underconstruction():
     return render_template('under-construction.html')
 
-@app.route('/contact-submit', methods=['GET'])
+@app.route('/contact-submit', methods=['GET','POST'])
 def sendmessage():
-	name = request.querystring['name']
-	email = request.querystring['email']
-	message = request.querystring['message']
+	name = request.form['name']
+	email = request.form['email']
+	message = request.form['message']
 
-	return '<ul><li>' + name + '</li><li>' + email + '</li><li>' + message + '</li></ul>'
-
-
+	return 'X'
