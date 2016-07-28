@@ -24,7 +24,4 @@ def sendmessage():
 	#message = request.form['message']
 	
 	if request.method == 'GET':
-		if request.form['name']:
-			return request.form['name']
-		else:
-			return 'X'
+		return render_template('index.html')
