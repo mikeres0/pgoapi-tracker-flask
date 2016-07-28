@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>pgoapi-tracker</title>
+    </head>
+    <body>
+        <link href="{{ url_for('static', filename='skeleton.min.css') }}" rel="stylesheet"/>
+
+        <div class="container">
+            <div class="row">
+                <div class="eight columns">
+                    <h1>pgoapi-tracker</h1>
+                </div>
+                <div class="four columns">
+                    <a href="/login">
+                        <input type="button" value="log in">
+                    </a>
+                    <a href="/signup">
+                        <input class="button-primary" type="button" value="sign up">
+                    </a>
+                </div>
+            </div>
+
+
+            <h5>welcome to the home of the pgoapi-tracker.</h5>
+            <p>this site is currently a work in progress, but the following features will be implemented:</p>
+            <ul>
+                <li>oauth2 logins for google and for users of the <a href="https://pgoapi.slack.com" target="_blank">pgoapi slack channel</a></li>
+                <li>standard login using ptc</li>
+                <li>ability to track locations simulated via. the <a href="https://github.com/tejado/pgoapi" target="_blank">pgoapi</a>
+                    <ul>
+                        <li>this will use google maps as the maps engine</li>
+                        <li>i plan to set up custom urls for each user to post their locations to</li>
+                        <li>eventually, i will create a python module for use with <a href="https://github.com/tejado/pgoapi" target="_blank">pgoapi</a> to send the location information</li>
+                    </ul>
+                </li>
+                <li>view caught pokemon</li>
+                <li>list inventory items</li>
+                <li>see nearby pokemon, pokestops and gyms</li>
+                <li>incubate eggs</li>
+                <li>hatch eggs</li>
+                <li>evolve pokemon</li>
+            </ul>
+
+            <h5>contact</h5>
+            <p>please contact <a href="mailto:mike.resoli@gmail.com" target="_blank">me</a> if you have any questions, or would like to contribute</p>
+        </div>
+
+        <div class="u-full-width" style="position:absolute;bottom:0;left:0;text-align:center;">
+            <p>the original api code was created by <a href="https://github.com/tejado" target="_blank">tejado</a> || site created by <a href="https://linkedin.com/in/mikeresoli" target="_blank">mike resoli</a></p>
+        </div>
+    </body>
+</html>
