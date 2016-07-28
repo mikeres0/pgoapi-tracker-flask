@@ -18,7 +18,7 @@ def index():
 def underconstruction():
     return render_template('under-construction.html')
 
-@app.route('/contact-submit', methods=[POST])
+@app.route('/contact-submit', methods=['POST'])
 def sendmessage():
 	name = request.form['name']
 	email = request.form['email']
