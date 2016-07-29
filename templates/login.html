@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>pgoapi-tracker</title>
+        <link href="{{ url_for('static', filename='skeleton.min.css') }}" rel="stylesheet"/>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+    </head>
+    <body>
+	    <div class="container">
+	    	<div class="row">
+	            <div class="seven columns">
+	                <h1>pgoapi-tracker</h1>
+	            </div>
+	            <div class="five columns">
+	            	<a href="/">
+	                    <input class="button" type="button" value="home">
+	                </a>
+	                <a href="/login">
+	                    <input type="button" value="log in">
+	            	</a>
+	                <a href="/signup">
+	                    <input class="button-primary" type="button" value="sign up">
+	                </a>
+	            </div>
+	            <br/>
+	            {% if underconst %}
+	                <p style="color:red;font-weight:bold;">{{ underconst }}</p>
+	            {% endif %}
+	        </div>
+
+	        <!-- Login form -->
+	        <!--<form action="{{ url_for('login') }}" method="post">
+	        	<div class="row">
+	                <div class="six columns">
+	                  <label for="username">username</label>
+	                  <input class="u-full-width" type="text" placeholder="username" name="username" id="usernameInput">
+	                </div>
+	            </div>
+	            <div class="row">
+	                <div class="six columns">
+	                  <label for="password">password</label>
+	                  <input class="u-full-width" type="password" placeholder="password" name="password" id="passwordInput">
+	                </div>
+	            </div>
+	            <input class="button-primary" type="submit" value="log in">
+	        </form>-->
+
+	        <h5>sign in</h5>
+	        <button class="button-primary"><i class="fa fa-facebook fa-1x"></i> sign in with facebook</button>
+	    </div>
+	    <div class="u-full-width" style="position:absolute;bottom:0;left:0;text-align:center;">
+            <p>the original api code was created by <a href="https://github.com/tejado" target="_blank">tejado</a> || site created by <a href="https://github.com/mikeres0" target="_blank">mike resoli</a></p>
+        </div>
+    </body>
+</html> 
