@@ -39,7 +39,14 @@
             </ul>
 
             <h5>contact</h5>
-            <form action="{{ url_for('sendmessage') }}" method="get" enctype="multipart/form-data">
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                {% for message in messages %}
+                  <p>{{ message }}</p>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}              
+            <form action="{{ url_for('sendmessage') }}" method="get">
               <div class="row">
                 <div class="six columns">
                   <label for="emailInput">Your email</label>
