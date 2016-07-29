@@ -5,8 +5,8 @@ from flask import Flask, render_template, Response, request
 
 
 app = Flask(__name__)
-login_manager = LoginManager()
-login_manager.init_app(app)
+#login_manager = LoginManager()
+#login_manager.init_app(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -14,7 +14,7 @@ def index():
 def sendmessage():
     email = request.form['email']
     flash('Thanks for the message ' + email)
-    return render_template('index.html')
+    return render_template('index.html', email=email)
 
 @app.route('/login')
 @app.route('/signup')
