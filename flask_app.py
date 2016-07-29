@@ -3,18 +3,11 @@
 from flask import Flask, render_template, Response, request, flash, json, make_response, session
 from authomatic.adapters import WerkzeugAdapter
 from authomatic import Authomatic
+from config import CONFIG
 import requests
 
 app = Flask(__name__)
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
-app.config['OAUTH_CREDENTIALS'] = {
-  'fb': {
-      'class_': oauth2.Facebook,
-      'consumer_key': '293720280981026',
-      'consumer_secret': '8ca2c045bfef4952870eb902a20d4862',
-      'scope': ['user_about_me', 'email', 'read_stream']
-  }
-}
 
 authomatic = Authomatic(app.config['OAUTH_CREDENTIALS'], app.secret_key, report_errors=False)
 
@@ -65,7 +58,7 @@ def underconstruction():
 def login(provider_name):
     response = make_response()
     result = authomatic.login(WerkzeugAdapter(request, response), provider_name)
-    
+
     if result:
       if result.user:
         result.user.update()
